@@ -6,7 +6,7 @@ const mysql=mysql1.createConnection({
     user:process.env.USER,
     password:process.env.PASSWORD,
     database:process.env.DATABASE,
-    port: 25734, 
+    port: DB_PORT, 
   ssl: {
     ca: fs.readFileSync('./ca.pem'),
     rejectUnauthorized: true

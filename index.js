@@ -1,8 +1,7 @@
 const express=require("express")
 const db=require("./connection")
-const dotenv=require("dotenv")
+
 const route=require("./routes/route")
-dotenv.config()
 
 app=express()
 app.use(express.json())
