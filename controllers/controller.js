@@ -50,11 +50,11 @@ async function addstudent(req,res) {
         const latitude=parseFloat(req.body.latitude)
         const longitude=parseFloat(req.body.longitude)
         console.log(latitude)
-        if(name || address || latitude || longitude){
-            if( isNaN(name)|| name.length>150){
+        if(name && address && latitude && longitude){
+            if( name.length>150){
                 res.status(400).json({success:false,eror:"you havent add name field perfectly"})
             }
-            else if(isNaN(address)||address.length>250){
+            else if(address.length>250){
                 res.status(400).json({success:false,eror:"length is too much"})
             }
             else if(latitude < -90 || latitude > 90){
